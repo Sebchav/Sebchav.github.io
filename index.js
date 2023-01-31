@@ -41,5 +41,15 @@ app.get("/webhook", (req, res)=>{
     }else{
          res.sendStatus(404);
     }
+  }else{
+    res.sendStatus(404);
   }
 });
+
+app.get("/", (req, res)=>{
+  res.status(200).send("Hola a mi bot")
+})
+
+app.listen(8080, ()=>{
+  console.log("servidor iniciado...")
+})
